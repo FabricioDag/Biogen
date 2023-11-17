@@ -26,6 +26,10 @@ header{
     position: absolute;
 }
 
+.logo span{
+    color: rgb(152, 202, 58) ;
+}
+
 .hamburguerBtn{
     cursor: pointer;
     z-index: 1000;
