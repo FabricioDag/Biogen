@@ -125,6 +125,9 @@ header{
     bottom: 1rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100;
+
+    animation: jump 2s infinite ease-in-out;
 }
 
 .title{
@@ -138,6 +141,25 @@ header{
 
 .contentText{
     font-size: var(--textFontSize);
+}
+
+.green{
+    position: absolute;
+    background-color: rgb(0, 24, 0);
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    z-index: 1;
+}
+
+.green::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 100%);
+    z-index: 1;
 }
 
 /*--------------------------------------- FIM DEBUG ------------------------------------------------------------*/
@@ -154,27 +176,40 @@ section{
     position: relative;
 }
 
+
 /* INICIO HOME */
 .home{
-    background-color: rgb(0, 24, 0);
+    /* background-color: rgb(0, 24, 0); */
+    background-image: url(./ImageBg.png);
     color: white;
+
+    
 }
 
 .homeContentWrapper{ 
     text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem; 
+    z-index: 100;
 }
 
 
 .homeBtn{
     font-size: var(--textFontSize);
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: 1.4rem;
     background-color: transparent;
     border: 2px solid white;
     color: white;
+    transition: .2s ease;
+}
+
+.homeBtn:hover{
+    cursor: pointer;
+    border: 2px solid var(--limeGreen);
+    color: var(--limeGreen);
 }
 
 /* FIM HOME */
@@ -193,7 +228,7 @@ section{
 }
 
 .servicosContentWrapper, .sobreContentWrapper, .orcamentoContentWrapper{
-    background-color: rgba(0, 255, 255, 0.24);
+    /* background-color: rgba(0, 255, 255, 0.24); */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -202,7 +237,7 @@ section{
 
 
 .cards{
-    background-color: rgba(60, 60, 221, 0.589);
+    /* background-color: rgba(60, 60, 221, 0.589); */
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -211,13 +246,13 @@ section{
 
 /*---------------------------------------------------- INICIO CARD ----------------------------------------------------------------------*/
 .card{
-    background-color: #2ECC71;
+    background-color: #2ecc70a9;
     padding: 1rem;
-    border: 2px solid rgb(0, 24, 0);
+    border: 3px solid rgb(0, 24, 0);
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    border-radius: .3rem;
+    border-radius: 8px;
 }
 
 .card h2{
@@ -374,11 +409,45 @@ footer{
     display: none;
 }
 
+@keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-1rem);
+    }
+    
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
 
 @media (min-width: 600px) {
 
+    :root{
+        --titleFontSize:2.25em;
+        --titleFontWeight:bold;
+    
+        --subTitleFontSize:18px;
+    
+        --textFontSize:14px;
+    
+        --limeGreen:rgb(152, 202, 58);
+        --bgGreen: #001F0C;
+        
+    }
+
+
+
     header{
         padding: 3rem;
+    }
+
+    header.ativo{
+        padding: 2rem 3rem;
     }
     
     .hamburguerBtn{
@@ -396,7 +465,7 @@ footer{
         display: flex;
         place-content: center;
         transition: .3s ease;
-    }
+        }
     
     .active{
         right: 0;
@@ -411,8 +480,86 @@ footer{
 
 
 
+    .homeContentWrapper{ 
+        /*
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; 
+        */
 
-   
+        display: flex;
+
+        /* background-color: #2ECC71; */
+        width: 50%;
+    }
+
     
+
+    /* ------------------ Serviços --------------- */
+    .cards{
+        /* 
+        background-color: rgba(60, 60, 221, 0.589);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; 
+        */
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 2rem;
+    }
+
+    .sobreContentWrapper{
+        /*
+        background-color: rgba(202, 181, 110, 0.24);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        */
+
+        /* background-color: rgba(255, 0, 0, 0.527); */
+
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        place-items: center;
+    }
+
+    .cardsSobre{
+        /*
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        */
+
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .cardSobre{
+        /* 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem; 
+        */
+
+        padding: 2rem;
+        border: 2px solid white;
+        border-radius: 8px;
+    }
+    
+    .orcamentoContentWrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        gap: 0;
+    }
+
+    .orcamentoContentWrapper .contentText{
+        padding:1rem 10rem;
+        /* background-color: red; */
+    }
 
   }
