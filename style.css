@@ -91,7 +91,7 @@ header{
     position: absolute;
     right: -50%;
     top: 0;
-    background-color: rgb(6, 82, 6);
+    background-color: #00330bee;
     padding: 2rem;
     width: 50%;
     height: 100vh;
@@ -123,8 +123,8 @@ header{
     font-weight: bolder;
     position: absolute;
     bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
+    
+    left: 48%;
     z-index: 100;
 
     animation: jump 2s infinite ease-in-out;
@@ -181,6 +181,7 @@ section{
 .home{
     /* background-color: rgb(0, 24, 0); */
     background-image: url(./ImageBg.png);
+    background-size: cover;
     color: white;
 
     
@@ -197,8 +198,8 @@ section{
 
 
 .homeBtn{
-    font-size: var(--textFontSize);
-    padding: 1rem;
+    font-size: .75rem;
+    padding:.75rem 3rem;
     border-radius: 1.4rem;
     background-color: transparent;
     border: 2px solid white;
@@ -246,7 +247,7 @@ section{
 
 /*---------------------------------------------------- INICIO CARD ----------------------------------------------------------------------*/
 .card{
-    background-color: #2ecc70a9;
+    /* background-color: #2ecc70a9; */
     padding: 1rem;
     border: 3px solid rgb(0, 24, 0);
     display: flex;
@@ -268,6 +269,10 @@ section{
     gap: 1rem;
 }
 
+.orcamentoBtn{
+    border: none;
+    border-radius: 8px;
+}
 
 /*---------------------------------------------------- FIM CARD ----------------------------------------------------------------------*/
 
@@ -291,8 +296,17 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-around;
+    gap: 1.5rem;
+
+    /* background-color: red; */
+    padding: 1rem;
 }
+
+.cardSobre .subTitle{
+    font-weight: bold;
+}
+
 
 .cardCircle{
     width: 100px;
@@ -304,6 +318,11 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.cardCircle i{
+    font-size: 3rem;
+    color: #7ca708;
 }
 
 /* FIM SOBRE */
@@ -383,7 +402,7 @@ footer{
 
 .socialBtn{
     color: black;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: .4rem;
     border-radius: 6px;
     width: 35px;
@@ -391,6 +410,12 @@ footer{
 
     display: grid;
     place-content: center;
+    transition: .2s ease;
+}
+
+.socialBtn:hover{
+    cursor: pointer;
+    background-color: white;
 }
 
 .copyrigthText{
@@ -431,9 +456,9 @@ footer{
         --titleFontSize:2.25em;
         --titleFontWeight:bold;
     
-        --subTitleFontSize:18px;
+        --subTitleFontSize:1.35rem;
     
-        --textFontSize:14px;
+        --textFontSize:1.15rem;
     
         --limeGreen:rgb(152, 202, 58);
         --bgGreen: #001F0C;
@@ -458,7 +483,7 @@ footer{
         position: relative;
         right: 0;
         top: 0;
-        background-color: rgba(255, 0, 0, 0.425);
+        background-color: transparent;
         padding: 0rem;
         width: 50%;
         height: 100%;
@@ -474,10 +499,11 @@ footer{
     .mobileNav ul{
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        gap: 0rem;
+        align-items: center;
+        gap: 3rem;
+        text-transform: uppercase;
+        font-weight: lighter;
     }
-
 
 
     .homeContentWrapper{ 
@@ -491,10 +517,18 @@ footer{
         display: flex;
 
         /* background-color: #2ECC71; */
+        margin-left: 2rem;
         width: 50%;
+        gap: 1.5rem;
     }
 
-    
+
+
+    .arrowDown i{
+        font-size: 2rem;
+        color: white;
+        
+    }
 
     /* ------------------ Serviços --------------- */
     .cards{
@@ -555,11 +589,35 @@ footer{
         grid-template-columns: 1fr 1fr;
         place-items: center;
         gap: 0;
+        padding: 3rem;
     }
 
     .orcamentoContentWrapper .contentText{
-        padding:1rem 10rem;
+        padding:1rem 7rem;
+        font-size: 1.5rem;
         /* background-color: red; */
+
+    }
+
+    .formOrcamento input{
+        color: white;
+        background-color: transparent;
+        padding: .8rem;
+    
+        border: 2px solid white;
+        border-radius: 9px;
+    }
+
+
+    
+    .formOrcamento button{
+        color: black;
+        background-color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: .5rem;
+        border-radius: 9px;
+        border: none;
     }
 
   }
