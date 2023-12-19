@@ -8,7 +8,9 @@
     
 </head>
 <body>
-    <header>
+
+     <!-- INICIO DO HEADER -->
+    <header id="menus" class="menus">
         <div class="logo">
             BIO<span>GEN</span>
         </div>
@@ -17,34 +19,48 @@
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
+
         <nav class="mobileNav">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#clientes">Clientes</a></li>
-                <li><a href="#laudos">Laudos</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#orcamento">Orçamento</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- FIM DO HEADER -->
+
     <main class="container">
+
+         <!-- INICIO DO HOME -->
+
         <section id="home" class="home">
-            <img class="homeBg hide" src="https://i0.wp.com/www.geosensori.com.br/wp-content/uploads/2019/05/RTK-3.png?fit=1064%2C768&ssl=1" alt="">
+            
             <div class="homeContentWrapper">
-                <div class="text">
-                    <h1>Criando conexões solidas entre biologia e engenharia sustentabilidade Lorem lorem lorem</h1>
-                    <p>Nosso trabalho Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, non!</p>
-                </div>
+
+                <h1 class="title">Bem-vindo à BioGen, onde a engenharia ambiental encontra a inovação sustentável.</h1>
+                <p class="subTitle">Estamos comprometidos em criar um futuro mais verde e saudável. Explore nossas soluções inteligentes e sustentáveis para desafios ambientais.</p>
                 <button class="homeBtn">SAIBA MAIS</button>
+
             </div>
+
+            <div class="arrowDown">\/</div>
         </section>
 
-        <section id="servicos" class="servicos ">
+         <!-- INICIO DO SERVICOS -->
+
+        <section id="servicos" class="servicos">
            
             <div class="servicosContentWrapper">
-                <h1 class="sectionTitle">Nossos Serviços</h1>
+
+                <p class="contentText">
+                    Descubra como a BioGen transforma desafios ambientais em oportunidades. Nossos serviços abrangem desde consultoria em sustentabilidade até soluções inovadoras de engenharia ambiental. Juntos, podemos criar um impacto positivo duradouro.
+                </p>
+
                 <div class="cards">
+
                     <div class="card">
                         <h2>MEIO AMBIENTE</h2>
                         <div class="textArea">
@@ -97,31 +113,90 @@
             </div>
 
         </section>
-        <section id="clientes" class="clientes ">
-            <h1 class="sectionTitle">Clientes</h1>
+
+         <!-- INICIO DO SOBRE -->
+
+        <section id="sobre" class="sobre">
+            
+            <div class="sobreContentWrapper">
+
+                <p class="contentText">
+                    Nossos valores são a base sólida sobre a qual construímos relacionamentos duradouros. Comprometidos com a excelência, integridade e responsabilidade ambiental, buscamos continuamente superar expectativas. Acreditamos que, juntos, podemos criar um mundo mais verde e equilibrado.
+                </p>
+
+                <div class="cardsSobre">
+
+                    <div class="cardSobre">
+
+                        <p class="subTitle">Respeito ao meio ambiente</p>
+
+                        <div class="cardCircle">
+
+                            image
+
+                        </div>
+                        
+                        <p class="contentText">Cuidamos do planeta como parte da nossa equipe, integrando práticas ambientais responsáveis em cada projeto para preservar a biodiversidade e os ecossistemas.</p>
+                    </div>
+
+                    <div class="cardSobre">
+
+                        <p class="subTitle">Inovação</p>
+
+                        <div class="cardCircle">
+
+                            image
+
+                        </div>
+                        
+                        <p class="contentText">Abraçamos a inovação, desafiando constantemente os limites para desenvolver soluções criativas que impulsionam a engenharia ambiental para o futuro.</p>
+                    </div>
+
+                    <div class="cardSobre">
+
+                        <p class="subTitle">integridade</p>
+
+                        <div class="cardCircle">
+
+                            image
+
+                        </div>
+                        
+                        <p class="contentText">Comprometemo-nos com a integridade em cada ação, guiando-nos por padrões éticos elevados para construir confiança e relações sólidas.</p>
+                    </div>
+
+                </div>
+            </div>
+
         </section>
 
-        <section id="laudos" class="laudos ">
-            <h1 class="sectionTitle">Laudos</h1>
-        </section>
+         <!-- INICIO DO ORCAMENTO -->
+
         <section id="orcamento" class="orcamento">
-            <h1 class="sectionTitle">Orçamento</h1>
-            <div class="wrapperOrcamento">
-                <h2>Entre em contato conosco</h2>
-                <form action="">
+            
+            <div class="orcamentoContentWrapper">
+
+                <p class="contentText">
+                    Estamos aqui para colaborar em projetos sustentáveis e responder a todas as suas perguntas. Entre em contato conosco para iniciar uma conversa sobre como podemos trabalhar juntos para um ambiente mais saudável e equilibrado.
+                </p>
+
+                <form class="formOrcamento" action="">
                     <input type="text" placeholder="Nome*">
                     <input type="tel" placeholder="Telefone*">
                     <input type="email" placeholder="Email*">
                     <input type="text" placeholder="Assunto">
                     <input type="text" placeholder="Mensagem">
-                    <button>Enviar Mensagem</button>
+                    <button>Enviar</button>
                 </form>
             </div>
         </section>
 
     </main>
 
+     <!-- INICIO DO FOOTER -->
+
     <footer>
+
         <div class="endereco">
             <p>Rua Seila de Acarai, 715</p>
             <p>+55 51 3339 8999</p>
@@ -138,7 +213,14 @@
                 C
             </div>
         </div>
+
+        <p class="copyrigthText">
+            Copyright BIOGEN 2023
+        </p>
     </footer>
+
+
+
     <script src="https://fabriciodag.github.io/Biogen/scripts.js"></script>
 </body>
 </html>
